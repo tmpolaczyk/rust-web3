@@ -14,6 +14,8 @@ use jsonrpc_core as rpc;
 /// Re-export of the `futures` crate.
 #[macro_use]
 pub extern crate futures;
+#[macro_use]
+extern crate serde_derive;
 
 // it needs to be before other modules
 // otherwise the macro for tests is not available.
@@ -22,6 +24,7 @@ pub mod helpers;
 
 pub mod api;
 pub mod contract;
+pub mod ethereum_tx_sign;
 pub mod error;
 pub mod transports;
 pub mod types;
